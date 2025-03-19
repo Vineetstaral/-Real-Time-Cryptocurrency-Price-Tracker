@@ -1,5 +1,4 @@
 streamlit
-llama-index
+llama_index
 python-dotenv
-requests
-
+llama-index-llms-groq
