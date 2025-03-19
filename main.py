@@ -52,7 +52,7 @@ def get_crypto_info(crypto_id):
     return response.text
 
 # Streamlit app
-st.title("📊 Real-Time Cryptocurrency Price Tracker 🚀")
+st.title(" Real-Time Cryptocurrency Price Tracker ")
 
 # Cryptocurrency input
 crypto_id = st.text_input("Enter a cryptocurrency (e.g., bitcoin, ethereum)").lower()
@@ -69,13 +69,13 @@ if st.button("Get Price and Info"):
             st.write(f"**Market Cap (USD):** ${price_data['market_cap']:,.2f}")
             st.write(f"**24h Price Change:** {price_data['price_change_24h']:.2f}%")
 
-            # Fetch additional info using Groq LLM
+   
             st.write("### Additional Information")
             crypto_info = get_crypto_info(crypto_id)
             st.write(crypto_info)
     else:
         st.write("Please enter a cryptocurrency name.")
 
-# Add a footer
+
 st.markdown("---")
-st.markdown("Made by [Your Name]")
+st.markdown("This AI can make mistakes. Check important info.")
